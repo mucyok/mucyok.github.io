@@ -1,0 +1,10 @@
+# Essais de photos et de couleurs (non publiés)
+essais/
+assets/essai.js
+assets/essai_accent.js
+# Pages générées mais retirées du menu
+research.html
+software.html
+.DS_Store
+# Ancien portrait, plus utilisé
+assets/portrait.jpg
