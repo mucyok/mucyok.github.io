@@ -163,8 +163,9 @@ main p + h2 { margin-top: 2.5rem !important; }
   .hero .bio + .bio { text-align: left; hyphens: manual; -webkit-hyphens: manual; }  /* mots longs insécables : blancs trop grands si justifié */
 }
 
-/* Téléphones : menu resserré pour que le bouton jour/nuit reste sur la ligne */
-@media (max-width: 30rem) {
+/* Petits téléphones : menu resserré pour que le bouton jour/nuit reste sur la ligne.
+   Seuil = largeur où le menu normal ne tient plus (environ 402 px) */
+@media (max-width: 25.25rem) {
   .top nav { gap: .3rem .9rem; font-size: 14px; }
   .top .theme-toggle { margin-left: .1rem; }
 }
