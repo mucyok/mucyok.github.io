@@ -8,3 +8,5 @@ software.html
 .DS_Store
 # Ancien portrait, plus utilisé
 assets/portrait.jpg
+# Notes de travail (handoffs), non publiées
+tasks/
