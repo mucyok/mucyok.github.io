@@ -162,3 +162,9 @@ main p + h2 { margin-top: 2.5rem !important; }
   .hero .bio, main p { text-align: justify; hyphens: auto; -webkit-hyphens: auto; hyphenate-limit-chars: 9 4 4; }
   .hero .bio + .bio { text-align: left; hyphens: manual; -webkit-hyphens: manual; }  /* mots longs insécables : blancs trop grands si justifié */
 }
+
+/* Téléphones : menu resserré pour que le bouton jour/nuit reste sur la ligne */
+@media (max-width: 30rem) {
+  .top nav { gap: .3rem .9rem; font-size: 14px; }
+  .top .theme-toggle { margin-left: .1rem; }
+}
