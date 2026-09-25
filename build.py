@@ -273,9 +273,13 @@ def teach(t):
             f'<div class="teach-w">{t["with_"]}{links}</div></div></li>')
 
 
-def header(current=None):
-    return (f'<header class="top"><a class="name" href="index.html">{NAME}</a>'
-            f"<nav>{nav(current)}{THEME_BUTTON}</nav></header>")
+def header(current=None, home=False):
+    # Sur l'accueil, pas de nom en haut : il est déjà en grand dans la page
+    # (sur ordinateur, un emplacement invisible garde le menu exactement à la même hauteur)
+    name = (f'<span class="name name-ghost" aria-hidden="true">{NAME}</span>' if home
+            else f'<a class="name" href="index.html">{NAME}</a>')
+    cls = "top top-home" if home else "top"
+    return f'<header class="{cls}">{name}<nav>{nav(current)}{THEME_BUTTON}</nav></header>'
 
 
 def inner_page(filename, label, body):
@@ -288,7 +292,7 @@ def inner_page(filename, label, body):
 
 def build():
     home = (head(NAME)
-            + f'<div class="wrap">{header()}<div class="home"><div class="hero">'
+            + f'<div class="wrap">{header(home=True)}<div class="home"><div class="hero">'
             + f'<figure class="photo"><img src="assets/portrait_carre.jpg" alt="{NAME}">'
             + f'<figcaption>Photo: <a href="{PHOTO_CREDIT_URL}">{PHOTO_CREDIT}</a></figcaption></figure>'
             + f'<div class="txt"><h1>{NAME}</h1>'

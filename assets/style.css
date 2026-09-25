@@ -169,3 +169,11 @@ main p + h2 { margin-top: 2.5rem !important; }
   .top nav { gap: .3rem .9rem; font-size: 14px; }
   .top .theme-toggle { margin-left: .1rem; }
 }
+
+/* Accueil : menu seul, à droite (à gauche sur téléphone, comme sur les autres pages) */
+.top-home .name-ghost { visibility: hidden; }
+@media (max-width: 40rem) {
+  .top-home { padding-block: 1.6rem 1.1rem; }
+  .top-home .name-ghost { display: none; }
+  .home { padding-block: 2rem 3rem; }
+}
