@@ -177,3 +177,15 @@ main p + h2 { margin-top: 2.5rem !important; }
   .top-home .name-ghost { display: none; }
   .home { padding-block: 2rem 3rem; }
 }
+
+/* ---------- Transition entre pages (View Transitions, navigateurs récents) ----------
+   Le grand nom de l'accueil et le petit nom de l'en-tête sont le même élément :
+   le navigateur anime le passage de l'un à l'autre. Ailleurs, simple fondu. */
+@view-transition { navigation: auto; }
+.hero h1 { width: fit-content; view-transition-name: site-name; }
+.top a.name { view-transition-name: site-name; }
+::view-transition-group(site-name) { animation-duration: .45s; animation-timing-function: cubic-bezier(.2, .7, .2, 1); }
+::view-transition-old(root), ::view-transition-new(root) { animation-duration: .3s; }
+@media (prefers-reduced-motion: reduce) {
+  @view-transition { navigation: none; }
+}

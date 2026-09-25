@@ -222,6 +222,11 @@ def head(title):
 <link rel="stylesheet" href="assets/style.css">
 <script>try{{localStorage.removeItem("theme");var t=sessionStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}}catch(e){{}}</script>
 <script src="assets/theme.js" defer></script>
+<script>/* Pas de transition entre deux pages intérieures (seulement vers ou depuis l'accueil) */
+addEventListener("pagereveal",function(e){{if(!e.viewTransition||!window.navigation||!navigation.activation)return;
+var a=navigation.activation,f=a.from&&a.from.url,t=a.entry&&a.entry.url;
+function home(u){{var p=new URL(u).pathname;return p.endsWith("/")||p.endsWith("/index.html")}}
+if(f&&t&&!home(f)&&!home(t))e.viewTransition.skipTransition()}});</script>
 </head>
 <body>
 """
