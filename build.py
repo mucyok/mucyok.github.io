@@ -156,7 +156,7 @@ TEACHING = [
          url="https://mucyok.github.io/das-clinical-trials-statistics/",  # adresse provisoire
          lang=None, level="Continuing education · DAS in Management of Clinical Trials, University of Geneva",
          desc="Four lectures on descriptive statistics, confidence intervals, hypothesis testing, and errors, power "
-              "and multiple testing, built around a published randomised trial.",
+              "and multiple testing.",
          with_='With <a href="https://stephaneguerrier.com/">Prof. S. Guerrier</a>',
          links=[("slides", "https://mucyok.github.io/das-clinical-trials-statistics/")]),
     dict(when="Since 2025", title="Introduction à la Statistique",
