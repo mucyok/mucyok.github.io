@@ -298,13 +298,14 @@ def inner_page(filename, label, body):
 def build():
     home = (head(NAME)
             + f'<div class="wrap">{header(home=True)}<div class="home"><div class="hero">'
+            + '<div class="side">'
             + f'<figure class="photo"><img src="assets/portrait_carre.jpg" alt="{NAME}">'
             + f'<figcaption>Photo: <a href="{PHOTO_CREDIT_URL}">{PHOTO_CREDIT}</a></figcaption></figure>'
+            + icons() + "</div>"
             + f'<div class="txt"><h1>{NAME}</h1>'
             + f'<p class="role">{", ".join(ROLES)}, {AFFILIATION}</p>'
             + f'<p class="bio">{BIO_HTML}</p>'
             + f'<p class="bio"><b>Research areas:</b> {escape(AREAS)}.</p>'
-            + icons()
             + "</div></div></div></div>\n"
             + ('<script src="assets/essai.js"></script>\n' if ESSAI_PHOTOS else "")
             + "</body>\n</html>\n")
